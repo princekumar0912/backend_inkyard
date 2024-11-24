@@ -34,7 +34,7 @@ const { TWILIO_SID, TWILIO_AUTH_TOKEN, TWILIO_PHONE_NUMBER } = process.env;
 
 // console.log('USER_EMAIL:', process.env.USER_EMAIL);
 
-app.get('/', (req, res) => {
+app.get('/home', (req, res) => {
   res.send('Welcome to the Tattoo Studio backend');
 });
 
