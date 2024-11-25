@@ -14,7 +14,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// app.use(cors({ origin: "https://inkyardtattoo.vercel.app" }));
 //Mongodb connection
 mongoose.connect(process.env.MONGO_URL)
   .then(() => console.log('MongoDB connected'))
@@ -42,7 +41,8 @@ app.get('/home', (req, res) => {
 
 // Define the /contact route
 app.post('/contact', async (req, res) => {
-  console.log(req.body);
+
+  // console.log(req.body);
   try {
     const { name, email, phone, message } = req.body;
 
